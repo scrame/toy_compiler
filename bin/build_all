@@ -1,0 +1,18 @@
+#!/bin/zsh
+
+export OPT=T1
+export TYPE="C D J R"
+
+rm -Rf build
+mkdir build
+
+cp -v rl/*.rl build
+cd build
+
+for i in `echo $TYPE` ; do;
+    for j in *.rl ; do
+        ragel -${OPT} -${i} $j
+    done
+done
+
+cd ..
