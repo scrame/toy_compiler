@@ -6,7 +6,7 @@ export TYPE="C D J R"
 rm -Rf build
 mkdir build
 
-cp -v rl/*.rl build
+cp rl/*.rl build
 cd build
 
 for i in `echo $TYPE` ; do;
